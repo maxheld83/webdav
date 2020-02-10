@@ -20,5 +20,5 @@ Remember to include the target filename.}
 \description{
 PUTs new file into a WebDAV drive, in the HTTP sense:
 Existing files at the same \code{url} are overwritten.
-Will retry as per \code{\link[httr:retry]{httr::retry()}}.
+Will retry as per \code{\link[httr:RETRY]{httr::RETRY()}}.
 }

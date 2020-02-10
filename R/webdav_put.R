@@ -2,7 +2,7 @@
 #'
 #' PUTs new file into a WebDAV drive, in the HTTP sense:
 #' Existing files at the same `url` are overwritten.
-#' Will retry as per [httr::retry()].
+#' Will retry as per [httr::RETRY()].
 #'
 #' @param local `character[1]`, giving the path to the local file to upload.
 #' @param url `character[1]`, giving the path to the file to create or overwrite on the WebDAV server.
