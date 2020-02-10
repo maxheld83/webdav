@@ -1,0 +1,21 @@
+Package: webdav
+Title: Access WebDAV servers
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Maximilian",
+           family = "Held",
+           role = c("aut", "cre"),
+           email = "info@maxheld.de",
+           comment = c(ORCID = "0000-0002-4703-5388"))
+Description: Read and write from WebDAV servers over http.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en
+LazyData: true
+Imports: 
+    httr (>= 1.4.1),
+    checkmate (>= 1.9.4)
+Suggests: 
+    getPass (>= 0.2.2),
+    testthat (>= 2.1.0)
+RoxygenNote: 7.0.2
