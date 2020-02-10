@@ -7,18 +7,18 @@
 webdav_put(local, url, user)
 }
 \arguments{
-\item{local}{`character[1]`, giving the path to the local file to upload.}
+\item{local}{\code{character[1]}, giving the path to the local file to upload.}
 
-\item{url}{`character[1]`, giving the path to the file to create or overwrite on the WebDAV server.
+\item{url}{\code{character[1]}, giving the path to the file to create or overwrite on the WebDAV server.
 Remember to include the target filename.}
 
-\item{user}{`character[1]`, giving the username to log in with.}
+\item{user}{\code{character[1]}, giving the username to log in with.}
 }
 \value{
-[httr::response]
+\link[httr:response]{httr::response}
 }
 \description{
 PUTs new file into a WebDAV drive, in the HTTP sense:
-Existing files at the same `url` are overwritten.
-Will retry as per [httr::retry()].
+Existing files at the same \code{url} are overwritten.
+Will retry as per \code{\link[httr:retry]{httr::retry()}}.
 }

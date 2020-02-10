@@ -8,6 +8,14 @@
 \description{
 Read and write from WebDAV servers over http.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/maxheld83/webdav}
+  \item Report bugs at \url{https://github.com/maxheld83/webdav/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Maximilian Held \email{info@maxheld.de} (\href{https://orcid.org/0000-0002-4703-5388}{ORCID})
 
