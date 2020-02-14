@@ -2,24 +2,37 @@ Package: webdav
 Title: Access WebDAV servers
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Maximilian",
-           family = "Held",
-           role = c("aut", "cre"),
-           email = "info@maxheld.de",
-           comment = c(ORCID = "0000-0002-4703-5388"))
+    c(
+      person(
+        given = "Maximilian",
+        family = "Held",
+        role = c("aut", "cre"),
+        email = "info@maxheld.de",
+        comment = c(ORCID = "0000-0002-4703-5388")
+      ),
+      person(
+        given = "Göttingen State and University Library",
+        role = c("cph", "fnd")
+      )
+    )
 Description: Read and write from WebDAV servers over http.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en
 LazyData: true
 Imports: 
+    checkmate (>= 1.9.4),
     httr (>= 1.4.1),
-    checkmate (>= 1.9.4)
+    passhelpr
 Suggests: 
+    covr (>= 3.4.0),
     getPass (>= 0.2.2),
     testthat (>= 2.1.0),
-    covr
+    keyring (>= 1.1.0),
+    urltools (>= 1.7.3)
 RoxygenNote: 7.0.2
 URL: https://github.com/maxheld83/webdav
 BugReports: https://github.com/maxheld83/webdav/issues
 Roxygen: list(markdown = TRUE)
+Remotes:
+    maxheld83/passhelpr@1c35da9

@@ -19,5 +19,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Maximilian Held \email{info@maxheld.de} (\href{https://orcid.org/0000-0002-4703-5388}{ORCID})
 
+Other contributors:
+\itemize{
+  \item Göttingen State and University Library [copyright holder, funder]
+}
+
 }
 \keyword{internal}

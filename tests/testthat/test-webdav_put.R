@@ -1,11 +1,11 @@
 test_that("upload", {
-  skip(message = "needs non-interactive auth")
   testthat::expect_error(
     object = {
       webdav_put(
         local = test_path("test-webdav_put.R"),
-        url = "https://www.maxheld.de",  # does not have WebDAV
-        user = "info@maxheld.de"
+        remote = "https://www.maxheld.de",  # does not have WebDAV
+        user = "info@maxheld.de",
+        password = "foo"
       )
     }
   )
@@ -13,8 +13,9 @@ test_that("upload", {
     object = {
       webdav_put(
         local = test_path("test-webdav_put.R"),
-        url = "https://my.powerfolder.com/webdav/webdav-test/test-webdav_put.R",
-        user = "info@maxheld.de"
+        remote = "https://my.powerfolder.com/webdav/webdav-test/test-webdav_put.R",
+        user = "info@maxheld.de",
+        password = Sys.getenv("POWERFOLDER_PW")
       )
     },
     class = "response"

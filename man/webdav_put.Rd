@@ -4,15 +4,26 @@
 \alias{webdav_put}
 \title{PUT new file on WebDAV server}
 \usage{
-webdav_put(local, url, user)
+webdav_put(local, remote, user, password, keyring)
 }
 \arguments{
 \item{local}{\code{character[1]}, giving the path to the local file to upload.}
 
-\item{url}{\code{character[1]}, giving the path to the file to create or overwrite on the WebDAV server.
+\item{remote}{\code{character[1]}, giving the path to the file to create or overwrite on the WebDAV server.
 Remember to include the target filename.}
 
-\item{user}{\code{character[1]}, giving the username to log in with.}
+\item{user}{\verb{[character(1)]} giving the username to authenticate with, for example \code{"jane"}.
+Also used to retrieve from and store the password in \code{keyring}.}
+
+\item{password}{\verb{[character(1)]} giving the password.
+Use this to substitute in an environment variable such as \code{Sys.getenv("SECRET")}.
+Recommended only when the environment variable is declared in an encrypted form, and when it is redacted from the logs.
+\strong{Do not expose your passwords in scripts or the R console.}
+Defaults to \code{NULL}, in which case the \code{keyring} is used.}
+
+\item{keyring}{For systems that support multiple keyrings, specify
+the name of the keyring to use here. If \code{NULL}, then the default
+keyring is used. See also \code{\link[keyring:has_keyring_support]{has_keyring_support()}}.}
 }
 \value{
 \link[httr:response]{httr::response}
@@ -21,4 +32,7 @@ Remember to include the target filename.}
 PUTs new file into a WebDAV drive, in the HTTP sense:
 Existing files at the same \code{url} are overwritten.
 Will retry as per \code{\link[httr:RETRY]{httr::RETRY()}}.
+}
+\details{
+The request is authenticated using \code{\link[passhelpr:authenticate2]{passhelpr::authenticate2()}}, with the \code{service} as the domain root from remote.
 }
